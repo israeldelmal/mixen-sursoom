@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="720"
+   height="114.31937"
+   viewBox="0 0 190.5 30.247"
+   version="1.1"
+   id="svg8"
+   inkscape:version="0.92.3 (2405546, 2018-03-11)"
+   sodipodi:docname="btn-ok.svg">
+  <defs
+     id="defs2" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.35"
+     inkscape:cx="-380.48446"
+     inkscape:cy="21.526051"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     units="px"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Capa 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-67.029967,-124.28177)">
+    <g
+       transform="matrix(2.5085571,0,0,2.5085571,-81.330774,-301.13069)"
+       id="layer1-3"
+       inkscape:label="Capa 1"
+       style="fill:#000000">
+      <path
+         inkscape:connector-curvature="0"
+         id="path826"
+         d="m 59.40302,181.32147 c 3.947084,-0.62045 8.125841,-2.00786 13.361458,-4.43621 10.217477,-4.73899 15.29041,-6.56247 19.843748,-7.1329 1.23922,-0.15524 3.79327,-0.21333 5.68854,-0.12937 5.683944,0.25181 9.233344,1.32936 19.050004,5.78335 8.27055,3.75248 13.55519,5.5763 17.72709,6.11789 0.43656,0.0567 -16.88704,0.1091 -38.496884,0.11651 -32.46771,0.0111 -38.923059,-0.0443 -37.173956,-0.31927 z"
+         style="fill:#000000;stroke-width:0.26458332" />
+    </g>
+  </g>
+</svg>

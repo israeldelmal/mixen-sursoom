@@ -1,0 +1,85 @@
+@extends('dashboard.master')
+
+@section('title', 'Escritorio')
+
+@section('content')
+	<div id="index">
+		<ul>
+			<li>
+				<span>Artículos</span>
+				<span>10</span>
+			</li>
+			<li>
+				<span>Cursos</span>
+				<span>10</span>
+			</li>
+			<li>
+				<span>Testimonios</span>
+				<span>10</span>
+			</li>
+			<li>
+				<span>Usuarios</span>
+				<span>10</span>
+			</li>
+		</ul>
+		<div>
+			<h1>Últimos artículos</h1>
+			<table>
+				<thead>
+					<tr>
+						<td>Artículo</td>
+						<td>Autor</td>
+						<td>Estatus</td>
+						<td>Fecha</td>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Próximamente</td>
+						<td>#</td>
+						<td>#</td>
+						<td>#</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<div>
+			<h1>Cursos activos</h1>
+			<table>
+				<thead>
+					<tr>
+						<td>Paquete</td>
+						<td>Autor</td>
+						<td>Fecha</td>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Próximamente</td>
+						<td>#</td>
+						<td>#</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<div>
+			<h1>Testimonios activos</h1>
+			<table>
+				<thead>
+					<tr>
+						<td>Servicio</td>
+						<td>Autor</td>
+						<td>Fecha</td>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Próximamente</td>
+						<td>#</td>
+						<td>#</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+@endsection

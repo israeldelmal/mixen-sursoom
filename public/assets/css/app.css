@@ -1,0 +1,2151 @@
+@import url(https://fonts.googleapis.com/css?family=Exo:300,500,700);@import url(https://fonts.googleapis.com/css?family=Montserrat:100,300,400,500);
+
+img {
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    transition     : all 0.3s ease-out;
+}
+
+.nav-bg {
+    background-color: white;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+.nav-odoo {
+    background-color: white;
+}
+
+.nav-odoo:before {
+    content   : '';
+    width     : 100%;
+    height    : 3px;
+    position  : absolute;
+    background: #83e600;
+    background: -webkit-gradient(linear, left top, right top, from(#83e600), to(#b4b4b4));
+    background: linear-gradient(to right, #83e600 0%, #b4b4b4 100%);
+    filter    : progid:DXImageTransform.Microsoft.gradient( startColorstr='#83e600', endColorstr='#b4b4b4',GradientType=1 );
+    position  : absolute;
+    bottom    : -3px;
+    left      : 0px;
+}
+
+.btn-green {
+    background-color: #83e600;
+    color           : black;
+    border-radius   : 18px;
+    padding         : 12px 30px;
+    cursor          : pointer;
+    transition      : all 0.3s ease-out;
+    border          : none;
+    display         : inline-block;
+}
+
+.btn-green:hover {
+    background-color: #345c00;
+    color           : white;
+}
+
+.btn-bordered {
+    border-radius   : 18px;
+    padding         : 12px 30px;
+    border          : 2px solid #83e600;
+    color           : black;
+    background-color: transparent;
+    cursor          : pointer;
+    transition      : all 0.3s ease-out;
+    display         : inline-block;
+}
+
+.btn-bordered:hover {
+    background-color: #83e600;
+    text-shadow     : none;
+}
+
+.btn-curve {
+    width          : 240px;
+    height         : 40px;
+    position       : absolute;
+    bottom         : -1px;
+    display        : flex;
+    align-items    : center;
+    justify-content: center;
+    font-size      : 1em;
+    color          : rgba(0, 0, 0, 0.35);
+}
+
+.btn-curve > i {
+    position: relative;
+    z-index : 50;
+}
+
+.btn-curve > img {
+    width   : 100%;
+    height  : 100%;
+    position: absolute;
+    z-index : 40;
+}
+
+.btn-curve:hover {
+    color: black;
+}
+
+.title {
+    font-size  : 2em;
+    font-family: 'Exo', sans-serif;
+    position   : relative;
+}
+
+.title:before {
+    content         : '';
+    width           : 2px;
+    height          : 60px;
+    background-color: #83e600;
+    position        : absolute;
+    left            : -15px;
+    top             : 0px;
+}
+
+.title:after {
+    content         : '';
+    width           : 2px;
+    height          : 40px;
+    background-color: #83e600;
+    position        : absolute;
+    left            : -10px;
+    top             : 0px;
+}
+
+.odoo-title {
+    font-size  : 2em;
+    font-family: 'Exo', sans-serif;
+    position   : relative;
+}
+
+.odoo-title:before {
+    content         : '';
+    width           : 2px;
+    height          : 60px;
+    background-color: #995687;
+    position        : absolute;
+    left            : -15px;
+    top             : 0px;
+}
+
+.odoo-title:after {
+    content         : '';
+    width           : 2px;
+    height          : 40px;
+    background-color: #995687;
+    position        : absolute;
+    left            : -10px;
+    top             : 0px;
+}
+
+.padding-li {
+    padding: 12px 12px 12px 0px;
+    color  : #995687;
+}
+
+* {
+    font-family: 'Montserrat', sans-serif;
+    margin     : 0px;
+    padding    : 0px;
+    box-sizing : border-box;
+    outline    : none;
+}
+
+body {
+    background-color: white;
+}
+
+    body > button {
+        display         : none;
+        width           : 40px;
+        height          : 40px;
+        position        : fixed;
+        left            : 30px;
+        top             : 30px;
+        background-color: rgb(52, 92, 0);
+        border          : none;
+        z-index         : 110;
+        padding         : 6px;
+        transition      : all 0.3s;
+    }
+
+        body > button > span {
+            display         : block;
+            width           : 100%;
+            height          : 1px;
+            background-color: white;
+            z-index         : 109;
+            margin-bottom   : 8px;
+            transition      : all 0.3s;
+        }
+
+        body > button > span:last-of-type {
+            margin-bottom: 0px;
+        }
+
+    .active-btn {
+        display         : flex !important;
+        align-items     : center;
+        justify-content : center;
+        border-radius   : 50%;
+        background-color: rgb(131, 230, 0);
+    }
+
+        .active-btn > span {
+            background-color: rgb(52, 92, 0);
+        }
+
+        .active-btn > span:nth-of-type(1) {
+            width    : 50%;
+            position : absolute;
+            transform: rotate(45deg);
+        }
+
+        .active-btn > span:nth-of-type(2) {
+            opacity: 0;
+        }
+
+        .active-btn > span:nth-of-type(3) {
+            width    : 50%;
+            position : absolute;
+            transform: rotate(-45deg);
+        }
+
+    body > nav {
+        width          : 100%;
+        height         : 100px;
+        display        : flex;
+        align-items    : center;
+        justify-content: center;
+        position       : fixed;
+        top            : 0px;
+        left           : 0px;
+        transition     : all 0.3s ease-out;
+        z-index        : 100;
+    }
+
+        body > nav > div {
+            width          : 80%;
+            display        : flex;
+            flex-flow      : row wrap;
+            justify-content: space-between;
+            align-items    : center;
+        }
+
+            body > nav > div > a {
+                display: inline-block;
+                height : 50px;
+            }
+
+                body > nav > div > a > img {
+                    height: 100%;
+                }
+
+                    body > nav > div > ul {
+                        list-style     : none;
+                        display        : flex;
+                        align-items    : center;
+                        justify-content: center;
+                    }
+
+                        body > nav > div > ul > li {
+                            display     : inline-block;
+                            margin-right: 16px;
+                        }
+
+                        body > nav > div > ul > li:last-of-type {
+                            margin-right: 0px;
+                        }
+
+                            body > nav > div > ul > li > a {
+                                font-family: 'Exo', sans-serif;
+                                color      : black;
+                                font-weight: 700;
+                            }
+
+                                body > nav > div > ul > li > a:hover {
+                                    color: #83e600;
+                                }
+
+#contacto {
+    width: 100%;
+}
+
+    #contacto > div {
+        width          : 50%;
+        margin         : auto;
+        padding        : 80px 0px;
+        background-size: cover;
+        display        : flex;
+        align-items    : center;
+        justify-content: center;
+        flex-direction : column;
+    }
+
+        #contacto > div > h2 {
+            font-family: 'Exo', sans-serif;
+            color      : white;
+            font-size  : 2em;
+        }
+
+        #contacto > div > sub {
+            font-size    : 1em;
+            color        : white;
+            margin-bottom: 40px;
+        }
+
+        #contacto > div > form {
+            width          : 100%;
+            display        : flex;
+            flex-flow      : row wrap;
+            justify-content: space-between;
+        }
+
+            #contacto > div > form > div {
+              width        : 49.5%;
+              margin-bottom: 16px;
+            }
+
+            #contacto > div > form > div:nth-of-type(n+5) {
+                width: 100%;
+            }
+
+            #contacto > div > form > div:last-of-type {
+                margin-bottom  : 0px;
+                display        : flex;
+                align-items    : center;
+                justify-content: center;
+            }
+
+                #contacto > div > form > div > input {
+                    width           : 100%;
+                    background-color: rgba(0, 0, 0, 0.5);
+                    padding         : 12px;
+                    border          : none;
+                    border-radius   : 8px;
+                }
+
+                #contacto > div > form > div > input::placeholder {
+                    color: white;
+                }
+
+                #contacto > div > form > div > textarea {
+                    width           : 100%;
+                    background-color: rgba(0, 0, 0, 0.5);
+                    padding         : 12px;
+                    border          : none;
+                    border-radius   : 8px;
+                }
+
+                #contacto > div > form > div > textarea::placeholder {
+                    color: white;
+                }
+
+    #contacto > map {
+        display: block;
+        width  : 100%;
+        height : 350px;
+    }
+
+    body > footer {
+        width           : 100%;
+        background-color: #313131;
+    }
+
+        body > footer > div:first-of-type {
+            width          : 80%;
+            margin         : auto;
+            padding        : 80px 0px;
+            display        : flex;
+            flex-flow      : row wrap;
+            justify-content: space-between;
+        }
+
+            body > footer > div:first-of-type > div {
+                width: 33.33%;
+            }
+
+                body > footer > div:first-of-type > div:nth-of-type(1) > ul {
+                    list-style: none;
+                    position  : relative;
+                }
+
+                body > footer > div:first-of-type > div:nth-of-type(1) > ul:before {
+                    content         : '';
+                    width           : 2px;
+                    height          : 60px;
+                    background-color: #83e600;
+                    position        : absolute;
+                    left            : -15px;
+                    top             : 0px;
+                }
+
+                body > footer > div:first-of-type > div:nth-of-type(1) > ul:after {
+                    content         : '';
+                    width           : 2px;
+                    height          : 40px;
+                    background-color: #83e600;
+                    position        : absolute;
+                    left            : -10px;
+                    top             : 0px;
+                }
+
+                    body > footer > div:first-of-type > div:nth-of-type(1) > ul > li {
+                        margin-bottom: 8px;
+                        color        : white;
+                    }
+
+                    body > footer > div:first-of-type > div:nth-of-type(1) > ul > li:last-of-type {
+                        margin-bottom: 0px;
+                    }
+
+                        body > footer > div:first-of-type > div:nth-of-type(1) > ul > li > a {
+                            font-weight: 500;
+                            color      : #83e600;
+                        }
+
+                        body > footer > div:first-of-type > div:nth-of-type(1) > ul > li > a:hover {
+                            color: #345c00;
+                        }
+
+                body > footer > div:first-of-type > div:nth-of-type(2) > img {
+                    width: 100%;
+                }
+
+            body > footer > div:first-of-type > div:nth-of-type(3) {
+                position: relative;
+            }
+
+                body > footer > div:first-of-type > div:nth-of-type(3) > a {
+                    display         : flex;
+                    align-items     : center;
+                    justify-content : center;
+                    width           : 40px;
+                    height          : 40px;
+                    border-radius   : 50%;
+                    background-color: #83e600;
+                    color           : #313131;
+                    position        : absolute;
+                    right           : 0px;
+                    top             : 0px;
+                }
+
+                body > footer > div:first-of-type > div:nth-of-type(3) > a:hover {
+                    background-color: #345c00;
+                }
+
+        body > footer > div:last-of-type {
+            width           : 100%;
+            padding         : 16px;
+            text-align      : center;
+            background-color: #232323;
+            color           : white;
+        }
+
+            body > footer > div:last-of-type > a {
+                color    : white;
+                font-size: 0.75em;
+            }
+
+            body > footer > div:last-of-type > a:hover {
+                color: rgb(234, 0, 0); 
+            }
+
+#sursoom {
+    width: 100%;
+}
+
+    #sursoom > header {
+        width          : 100%;
+        height         : 100vh;
+        display        : flex;
+        align-items    : center;
+        justify-content: center;
+        background-size: cover;
+    }
+
+        #sursoom > header > div {
+            width         : 80%;
+            display       : flex;
+            align-items   : flex-start;
+            flex-direction: column;
+        }
+
+            #sursoom > header > div > h1 {
+                font-family  : 'Exo', sans-serif;
+                font-size    : 3em;
+                white-space  : pre-line;
+                margin-bottom: 18px;
+            }
+
+            #sursoom > header > div > sub {
+                display      : block;
+                white-space  : pre-line;
+                margin-bottom: 18px;
+                font-size    : 1em;
+            }
+
+            #sursoom > header > div > ul {
+                list-style     : none;
+                display        : flex;
+                flex-flow      : row wrap;
+                justify-content: space-between;
+            }
+
+                #sursoom > header > div > ul > li:first-of-type {
+                    margin-right: 16px;
+                }
+
+    #sursoom > #nosotros {
+        width  : 100%;
+        padding: 80px 0px;
+    }
+
+        #sursoom > #nosotros > div {
+            width          : 80%;
+            margin         : auto;
+            display        : flex;
+            flex-flow      : row wrap;
+            justify-content: space-between;
+            align-items    : center;
+        }
+
+            #sursoom > #nosotros > div > div {
+                width: 49%;
+            }
+
+                #sursoom > #nosotros > div > div > img {
+                    width: 100%;
+                }
+
+                #sursoom > #nosotros > div > div > p {
+                    text-align: justify;
+                    margin-top: 32px;
+                }
+
+    #sursoom > #descanso-1 {
+        width          : 100%;
+        height         : 500px;
+        background-size: cover;
+        display        : flex;
+        align-items    : center;
+        justify-content: center;
+        position       : relative;
+    }
+
+        #sursoom > #descanso-1 > div {
+            width  : 50%;
+            padding: 40px;
+            border : 3px solid white;
+        }
+
+            #sursoom > #descanso-1 > div > h3 {
+                font-family: 'Exo', sans-serif;
+                font-size  : 2em;
+                display    : block;
+                color      : white;
+                text-align : center;
+                white-space: pre-line;
+            }
+
+    #sursoom > #productos {
+        width  : 100%;
+        padding: 80px 0px;
+    }
+
+        #sursoom > #productos > div {
+            width : 80%;
+            margin: auto;
+        }
+
+            #sursoom > #productos > div > sub {
+                display      : block;
+                font-size    : 0.85em;
+                margin-bottom: 40px;
+            }
+
+            #sursoom > #productos > div > div {
+                width          : 100%;
+                display        : flex;
+                flex-flow      : row wrap;
+                justify-content: space-between;
+            }
+
+                #sursoom > #productos > div > div > a {
+                    display         : flex;
+                    align-items     : center;
+                    justify-content : center;
+                    flex-direction  : column;
+                    width           : 32.5%;
+                    height          : 350px;
+                    padding         : 20px;
+                    background-color: #e5e5e5;
+                    text-align      : center;
+                    color           : black;
+                }
+
+                #sursoom > #productos > div > div > a:hover {
+                    background-color: #a4f678;
+                }
+
+                #sursoom > #productos > div > div > a:nth-of-type(n+4) {
+                    margin-top: 18px;
+                }
+
+                    #sursoom > #productos > div > div > a > img {
+                        width        : 25%;
+                        transition   : all 0.3s ease-out;
+                        margin-bottom: 10px;
+                    }
+
+                    #sursoom > #productos > div > div > a > strong {
+                        font-family  : 'Exo', sans-serif;
+                        font-size    : 2em;
+                        margin-bottom: 12px;
+                    }
+
+    #sursoom > #documentacion {
+        width: 100%;
+    }
+
+        #sursoom > #documentacion > div {
+            width          : 100%;
+            height         : 600px;
+            display        : flex;
+            align-items    : center;
+            flex-flow      : row wrap;
+            justify-content: space-between;
+            position       : relative;
+        }
+
+            #sursoom > #documentacion > div > div {
+                width  : 50%;
+                padding: 40px;
+            }
+
+            #sursoom > #documentacion > div > div:first-of-type {
+                width          : 50%;
+                height         : 100%;
+                position       : relative;
+                background-size: cover;
+            }
+
+                #sursoom > #documentacion > div > div > ul {
+                    margin-top   : 40px;
+                    margin-bottom: 40px;
+                    margin-left  : 16px;
+                }
+
+                    #sursoom > #documentacion > div > div > ul > li {
+                        margin-bottom: 8px;
+                    }
+
+                        #sursoom > #documentacion > div > div > ul > li > ul {
+                            margin-top : 8px;
+                            margin-left: 32px;
+                        }
+
+                            #sursoom > #documentacion > div > div > ul > li > ul > li {
+                                margin-bottom: 8px;
+                            }
+
+            #sursoom > #documentacion > div:last-of-type {
+                flex-direction: row-reverse;
+            }
+
+    #sursoom > #descanso-2 {
+        width: 100%;
+        height: 500px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+    }
+
+        #sursoom > #descanso-2 > div {
+            width          : 50%;
+            display        : flex;
+            flex-flow      : row wrap;
+            justify-content: space-between;
+        }
+
+            #sursoom > #descanso-2 > div > h3 {
+                display      : block;
+                width        : 100%;
+                text-align   : center;
+                font-family  : 'Exo', sans-serif;
+                font-size    : 2em;
+                margin-bottom: 40px;
+                color        : white;
+            }
+
+            #sursoom > #descanso-2 > div > figure {
+                width          : 30%;
+                display        : flex;
+                align-items    : center;
+                justify-content: center;
+                flex-direction : column;
+            }
+
+                #sursoom > #descanso-2 > div > figure > img {
+                    width        : 100%;
+                    margin-bottom: 40px;
+                }
+
+    #sursoom > #blog {
+        width  : 100%;
+        padding: 80px 0px;
+    }
+
+        #sursoom > #blog > div {
+            width : 80%;
+            margin: auto;
+        }
+
+            #sursoom > #blog > div > sub {
+                display      : block;
+                font-size    : 0.85em;
+                margin-bottom: 40px;
+            }
+
+            #sursoom > #blog > div > div {
+                width          : 100%;
+                display        : flex;
+                flex-flow      : row wrap;
+                justify-content: space-between;
+            }
+
+                #sursoom > #blog > div > div > article {
+                    width: 24%;
+                }
+
+                    #sursoom > #blog > div > div > article > header {
+                        width        : 100%;
+                        margin-bottom: 16px;
+                    }
+
+                        #sursoom > #blog > div > div > article > header > img {
+                            width: 100%;
+                        }
+
+                    #sursoom > #blog > div > div > article > h1 {
+                        font-size: 1.5em;
+                    }
+
+                    #sursoom > #blog > div > div > article > div {
+                        width        : 100%;
+                        display      : flex;
+                        align-items  : center;
+                        margin-bottom: 16px;
+                        color        : #83e600;
+                        font-size    : 0.75em;
+                    }
+
+                        #sursoom > #blog > div > div > article > div > address {
+                            margin-right: 12px;
+                            display     : inline-block;
+                        }
+
+                        #sursoom > #blog > div > div > article > div > time {
+                            margin-left: 12px;
+                        }
+
+                    #sursoom > #blog > div > div > article > p {
+                        width        : 100%;
+                        display      : block;
+                        text-align   : justify;
+                        margin-bottom: 16px;
+                    }
+
+                    #sursoom > #blog > div > div > article > a {
+                        font-size: 0.75em;
+                    }
+
+#gba {
+    width: 100%;
+}
+
+    #gba > header {
+        width          : 100%;
+        height         : 100vh;
+        display        : flex;
+        align-items    : center;
+        justify-content: center;
+        background-size: cover;
+    }
+
+        #gba > header > div {
+            width          : 80%;
+            display        : flex;
+            flex-flow      : row wrap;
+            justify-content: space-between;
+            align-items    : center;
+        }
+
+            #gba > header > div > div:first-of-type {
+                width         : 50%;
+                display       : flex;
+                align-items   : flex-start;
+                flex-direction: column;
+            }
+
+                #gba > header > div > div:first-of-type > h1 {
+                    font-family  : 'Exo', sans-serif;
+                    font-size    : 3em;
+                    margin-bottom: 18px;
+                }
+
+                #gba > header > div > div:first-of-type > sub {
+                    display      : block;
+                    white-space  : pre-line;
+                    margin-bottom: 18px;
+                    font-size    : 1em;
+                }
+
+                #gba > header > div > div:first-of-type > ul {
+                    list-style     : none;
+                    display        : flex;
+                    flex-flow      : row wrap;
+                    justify-content: space-between;
+                }
+
+                    #gba > header > div > div:first-of-type > ul > li:first-of-type {
+                        margin-right: 16px;
+                    }
+
+            #gba > header > div > div:last-of-type {
+                width       : 50%;
+                padding-left: 40px;
+            }
+
+                #gba > header > div > div:last-of-type > img {
+                    width: 100%;
+                }
+
+    #gba > #nosotros {
+      width  : 100%;
+      padding: 80px 0px;
+    }
+
+        #gba > #nosotros > div {
+            width          : 80%;
+            margin         : auto;
+            display        : flex;
+            flex-flow      : row wrap;
+            justify-content: space-between;
+            align-items    : center;
+        }
+
+            #gba > #nosotros > div > div {
+                width: 49%;
+            }
+
+                #gba > #nosotros > div > div > img {
+                    width: 100%;
+                }
+
+                #gba > #nosotros > div > div > p {
+                    text-align: justify;
+                    margin-top: 32px;
+                }
+
+    #gba > #descanso-1 {
+        width          : 100%;
+        height         : 500px;
+        background-size: cover;
+        display        : flex;
+        align-items    : center;
+        justify-content: center;
+        position       : relative;
+    }
+
+        #gba > #descanso-1 > div {
+            width: 80%;
+        }
+
+            #gba > #descanso-1 > div > h3 {
+                width          : 100%;
+                font-family    : 'Exo', sans-serif;
+                font-size      : 2em;
+                display        : block;
+                color          : white;
+                text-align     : center;
+                margin-bottom  : 40px;
+                display        : flex;
+                align-items    : center;
+                justify-content: center;
+            }
+
+                #gba > #descanso-1 > div > h3 > img {
+                    height     : 60px;
+                    width      : auto;
+                    margin-left: 6px;
+                }
+
+            #gba > #descanso-1 > div > ul {
+                list-style     : none;
+                width          : 100%;
+                display        : flex;
+                flex-flow      : row wrap;
+                justify-content: space-between;
+                align-items    : center;
+            }
+
+                #gba > #descanso-1 > div > ul > li {
+                    font-family : 'Exo', sans-serif;
+                    font-size   : 1.5em;
+                    text-align  : center;
+                    display     : block;
+                    width       : 25%;
+                    border-right: 2px solid white;
+                    color       : white;
+                    padding     : 20px;
+                }
+
+                #gba > #descanso-1 > div > ul > li:first-of-type {
+                    border-left: 2px solid white;
+                }
+
+    #gba > #soluciones {
+        width  : 100%;
+        padding: 80px 0px;
+    }
+
+        #gba > #soluciones > div {
+            width : 80%;
+            margin: auto;
+        }
+
+            #gba > #soluciones > div > sub {
+                display      : block;
+                font-size    : 0.85em;
+                margin-bottom: 40px;
+            }
+
+            #gba > #soluciones > div > div {
+                width          : 100%;
+                display        : flex;
+                flex-flow      : row wrap;
+                justify-content: space-between;
+            }
+
+                #gba > #soluciones > div > div > a {
+                    display         : flex;
+                    align-items     : center;
+                    justify-content : center;
+                    flex-direction  : column;
+                    width           : 32.5%;
+                    height          : 350px;
+                    padding         : 20px;
+                    background-color: #e5e5e5;
+                    text-align      : center;
+                    color           : black;
+                }
+
+                #gba > #soluciones > div > div > a:hover {
+                    background-color: #a4f678;
+                }
+
+            #gba > #soluciones > div > div > a:nth-of-type(n+4) {
+                margin-top: 18px;
+            }
+
+                #gba > #soluciones > div > div > a > img {
+                    width        : 25%;
+                    margin-bottom: 15px;
+                }
+
+                #gba > #soluciones > div > div > a > strong {
+                    font-family  : 'Exo', sans-serif;
+                    font-size    : 2em;
+                    margin-bottom: 12px;
+                }
+
+    #gba > #documentacion {
+        width: 100%;
+    }
+
+        #gba > #documentacion > div {
+            width          : 100%;
+            height         : 600px;
+            display        : flex;
+            align-items    : center;
+            flex-flow      : row wrap;
+            justify-content: space-between;
+            position       : relative;
+        }
+
+            #gba > #documentacion > div > div {
+                width  : 50%;
+                padding: 80px;
+            }
+
+            #gba > #documentacion > div > div:first-of-type {
+                width          : 50%;
+                height         : 100%;
+                position       : relative;
+                background-size: cover;
+            }
+
+                #gba > #documentacion > div > div > ul {
+                    margin-top   : 40px;
+                    margin-bottom: 40px;
+                    margin-left  : 16px;
+                }
+
+                    #gba > #documentacion > div > div > ul > li {
+                        margin-bottom: 8px;
+                    }
+
+                        #gba > #documentacion > div > div > ul > li > ul {
+                            margin-top : 8px;
+                            margin-left: 32px;
+                        }
+
+                            #gba > #documentacion > div > div > ul > li > ul > li {
+                                margin-bottom: 8px;
+                            }
+
+        #gba > #documentacion > div:last-of-type {
+            flex-direction: row-reverse;
+        }
+
+    #gba > #descanso-2 {
+        width          : 100%;
+        height         : 500px;
+        display        : flex;
+        align-items    : center;
+        justify-content: center;
+        position       : relative;
+    }
+
+        #gba > #descanso-2 > div {
+            width: 80%;
+        }
+
+            #gba > #descanso-2 > div > h3 {
+                display      : block;
+                width        : 100%;
+                text-align   : center;
+                font-family  : 'Exo', sans-serif;
+                font-size    : 2em;
+                margin-bottom: 40px;
+                color        : white;
+            }
+
+            #gba > #descanso-2 > div > ul {
+                list-style     : none;
+                display        : flex;
+                flex-flow      : row wrap;
+                justify-content: space-between;
+                align-items    : center;
+            }
+
+                #gba > #descanso-2 > div > ul > li {
+                    display: block;
+                    width  : 12.5%;
+                }
+
+                    #gba > #descanso-2 > div > ul > li > img {
+                        width: 100%;
+                    }
+
+    #gba > #propuesta-economica {
+        width  : 100%;
+        padding: 80px 0px;
+    }
+
+        #gba > #propuesta-economica > div {
+            width : 80%;
+            margin: auto;
+        }
+
+            #gba > #propuesta-economica > div > sub {
+                display      : block;
+                font-size    : 0.85em;
+                margin-bottom: 40px;
+            }
+
+            #gba > #propuesta-economica > div > div {
+                width          : 100%;
+                display        : flex;
+                flex-flow      : row wrap;
+                justify-content: space-between;
+            }
+
+                #gba > #propuesta-economica > div > div > table {
+                    width          : 100%;
+                    border-collapse: collapse;
+                }
+
+                #gba > #propuesta-economica > div > div > table:last-of-type {
+                    margin-top: 40px;
+                }
+
+                    #gba > #propuesta-economica > div > div > table > thead > tr {
+                        background-color: #313131;
+                        color           : white;
+                        text-align      : center;
+                    }
+
+                        #gba > #propuesta-economica > div > div > table > thead > tr > td {
+                            padding: 12px;
+                        }
+
+                    #gba > #propuesta-economica > div > div > table > tbody > tr {
+                        background-color: gainsboro;
+                        border-top      : 2px solid white;
+                    }
+
+                        #gba > #propuesta-economica > div > div > table > tbody > tr > td {
+                            color     : black;
+                            padding   : 12px;
+                            text-align: center;
+                        }
+
+#odoo {
+    width: 100%;
+}
+
+    #odoo > header {
+        width           : 100%;
+        height          : 60vh;
+        background-color: gainsboro;
+        display         : flex;
+        align-items     : center;
+        justify-content : center;
+        flex-direction  : column;
+        position        : relative;
+    }
+
+        #odoo > header > img {
+            width        : 35%;
+            margin-top   : 100px;
+            margin-bottom: 20px;
+        }
+
+        #odoo > header > h1 {
+            text-align    : center;
+            font-size     : 2.5em;
+            text-transform: uppercase;
+            font-weight   : 300;
+        }
+
+    #odoo > #nosotros {
+        width  : 100%;
+        padding: 80px 0px;
+    }
+
+        #odoo > #nosotros > div {
+            width          : 80%;
+            margin         : auto;
+            display        : flex;
+            flex-flow      : row wrap;
+            justify-content: space-between;
+            align-items    : center;
+        }
+
+            #odoo > #nosotros > div > div {
+                width: 49%;
+            }
+
+                #odoo > #nosotros > div > div > img {
+                    width: 100%;
+                }
+
+                #odoo > #nosotros > div > div > p {
+                    text-align: justify;
+                    margin-top: 32px;
+                }
+
+    #odoo > #ecosistema {
+        width           : 100%;
+        display         : flex;
+        flex-flow       : row wrap;
+        justify-content : space-between;
+        background-color: gainsboro;
+        position        : relative;
+    }
+
+        #odoo > #ecosistema > h1 {
+            position : absolute;
+            top      : 20px;
+            left     : 20px;
+            color    : rgba(255, 255, 255, 0.25);
+            font-size: 2.5em;
+        }
+
+        #odoo > #ecosistema > div {
+            width          : 25%;
+            height         : 350px;
+            display        : flex;
+            justify-content: center;
+            align-items    : center;
+            flex-direction : column;
+            color          : white;
+        }
+
+        #odoo > #ecosistema > div:nth-of-type(1) {
+            background-color: #995687;
+        }
+
+        #odoo > #ecosistema > div:nth-of-type(2) {
+            background-color: rgba(140, 60, 118, 0.5);
+        }
+
+        #odoo > #ecosistema > div:nth-of-type(3) {
+            background-color: rgba(140, 60, 118, 0.25);
+        }
+
+            #odoo > #ecosistema > div > span {
+                font-family  : 'Exo', sans-serif;
+                font-size    : 1.5em;
+                text-shadow  : 0 0 3px black;
+                margin-bottom: 10px;
+            }
+
+            #odoo > #ecosistema > div > ul {
+                width      : 80%;
+                text-shadow: 0 0 3px black;
+            }
+
+                #odoo > #ecosistema > div > ul > li {
+                    margin-left: 16px;
+                }
+
+    #odoo > #clientes {
+        width  : 100%;
+        padding: 80px 0px;
+    }
+
+        #odoo > #clientes > div {
+            width : 80%;
+            margin: auto;
+        }
+
+            #odoo > #clientes > div > h3 {
+                margin-bottom: 40px;
+            }
+
+            #odoo > #clientes > div > ul {
+                display        : flex;
+                flex-flow      : row wrap;
+                justify-content: space-between;
+                align-items    : center;
+                width          : 100%;
+                list-style     : none;
+            }
+
+                #odoo > #clientes > div > ul > li {
+                    width: 15%;
+                }
+
+                    #odoo > #clientes > div > ul > li > img {
+                        width: 100%;
+                    }
+
+    #odoo > #aplicaciones-principales {
+        width  : 100%;
+        padding: 80px 0px;
+    }
+
+        #odoo > #aplicaciones-principales > div {
+            width : 80%;
+            margin: auto;
+        }
+
+            #odoo > #aplicaciones-principales > div > h2 {
+                margin-bottom: 40px;
+            }
+
+            #odoo > #aplicaciones-principales > div > div {
+                width: 100%;
+            }
+
+                #odoo > #aplicaciones-principales > div > div > div {
+                    width: 100%;
+                }
+
+                    #odoo > #aplicaciones-principales > div > div > div > ul {
+                        list-style: none;
+                        display   : flex;
+                        flex-flow : row wrap;
+                        width     : 100%;
+                    }
+
+                        #odoo > #aplicaciones-principales > div > div > div > ul > li {
+                            width        : 25%;
+                            padding-right: 1px;
+                            text-align   : center;
+                        }
+
+                        #odoo > #aplicaciones-principales > div > div > div > ul > li:last-of-type {
+                            padding-right: 0px;
+                        }
+
+                            #odoo > #aplicaciones-principales > div > div > div > ul > li > a {
+                                display         : block;
+                                width           : 100%;
+                                text-align      : center;
+                                background-color: gainsboro;
+                                color           : #995687;
+                                font-family     : 'Exo', sans-serif;
+                                padding         : 12px;
+                            }
+
+                            #odoo > #aplicaciones-principales > div > div > div > ul > li > a:hover {
+                                background-color: #995687;
+                                color           : white;
+                            }
+
+    #odoo > #descanso-2 {
+        width          : 100%;
+        height         : 350px;
+        display        : flex;
+        align-items    : center;
+        justify-content: center;
+        position       : relative;
+    }
+
+        #odoo > #descanso-2 > h3 {
+            color      : white;
+            font-family: 'Exo', sans-serif;
+            font-size  : 2em;
+            white-space: pre-line;
+            text-align : center;
+        }
+
+            #odoo > #descanso-2 > h3 > span {
+                font-size  : 1.5em;
+                font-family: 'Exo', sans-serif;
+            }
+
+    #odoo > #metodologia {
+        width  : 100%;
+        padding: 80px 0px;
+    }
+
+        #odoo > #metodologia > div {
+            width : 80%;
+            margin: auto;
+        }
+
+            #odoo > #metodologia > div > h1 {
+                margin-bottom: 40px;
+            }
+
+            #odoo > #metodologia > div > div {
+                width          : 100%;
+                display        : flex;
+                flex-flow      : row wrap;
+                justify-content: space-between;
+            }
+
+                #odoo > #metodologia > div > div > a {
+                    display         : flex;
+                    align-items     : center;
+                    justify-content : center;
+                    flex-direction  : column;
+                    width           : 32.5%;
+                    height          : 350px;
+                    padding         : 20px;
+                    background-color: #e5e5e5;
+                    text-align      : center;
+                    color           : black;
+                }
+
+                #odoo > #metodologia > div > div > a:hover {
+                    background-color: #995687;
+                    color           : white;
+                }
+
+                    #odoo > #metodologia > div > div > a:hover > img {
+                        opacity: 0.5;
+                    }
+
+                #odoo > #metodologia > div > div > a:nth-of-type(n+4) {
+                    margin-top: 18px;
+                }
+
+                    #odoo > #metodologia > div > div > a > img {
+                        width        : 35%;
+                        margin-bottom: 10px;
+                        transition   : all 0.3s ease-out;
+                    }
+
+                    #odoo > #metodologia > div > div > a > strong {
+                        font-family  : 'Exo', sans-serif;
+                        font-size    : 2em;
+                        margin-bottom: 12px;
+                    }
+
+@media screen and (max-width: 1440px) {
+    body > nav > div {
+        width: 85%;
+    }
+
+    #sursoom > header > div {
+        width: 85%;
+    }
+
+    #sursoom > #nosotros > div {
+        width: 85%;
+    }
+
+    #sursoom > #productos > div {
+        width: 85%;
+    }
+
+    #sursoom > #blog > div {
+        width: 85%;
+    }
+
+    body > footer > div:first-of-type {
+        width: 85%;
+    }
+
+    /*GBA*/
+    #gba > header > div {
+        width: 85%;
+    }
+
+    #gba > #nosotros > div {
+        width: 85%;
+    }
+
+    #gba > #descanso-1 > div {
+        width: 85%;
+    }
+
+    #gba > #soluciones > div {
+        width: 85%;
+    }
+
+    #gba > #descanso-2 > div {
+        width: 85%;
+    }
+
+    #gba > #propuesta-economica > div {
+        width: 85%;
+    }
+
+    /*Odoo*/
+    #odoo > #nosotros > div {
+        width: 85%;
+    }
+
+    #odoo > #clientes > div {
+        width: 85%;
+    }
+
+    #odoo > #aplicaciones-principales > div {
+        width: 85%;
+    }
+
+    #odoo > #metodologia > div {
+        width: 85%;
+    }
+}
+
+@media all and (orientation: landscape) and (max-width: 1370px) {
+    body > button {
+        display: block;
+    }
+
+    body > nav {
+        width           : 100%;
+        height          : 100%;
+        position        : fixed;
+        background-color: white;
+        margin-top      : -100vh;
+        transition      : all 0.3s;
+    }
+
+    .active-nav {
+        margin-top: 0px !important;
+    }
+
+        body > nav > div {
+            display        : flex;
+            align-items    : center;
+            justify-content: center;
+            flex-direction : column;
+        }
+
+            body > nav > div > a {
+                margin-bottom: 40px;
+            }
+
+            body > nav > div > ul {
+                flex-direction: column;
+            }
+
+                body > nav > div > ul > li {
+                    margin-right : 0px;
+                    margin-bottom: 12px;
+                }
+
+                body > nav > div > ul > li:last-of-type {
+                    margin-bottom: 0px;
+                }
+
+    #sursoom > #nosotros > div {
+        width: 90%;
+    }
+
+    #sursoom > #productos > div {
+        width: 90%;
+    }
+
+    #sursoom > #blog > div {
+        width: 90%;
+    }
+
+    body > footer > div:first-of-type {
+        width: 90%;
+    }
+
+    /*Odoo*/
+    #odoo > header {
+        height: 100vh;
+    }
+
+        #odoo > header > img {
+            margin-top: 0px;
+        }
+}
+
+@media all and (orientation: landscape) and (max-width: 1030px) {
+    #sursoom > #descanso-1 > div {
+        width: 75%;
+    }
+
+    #sursoom > #productos > div > div > a {
+        width: 49%;
+    }
+
+    #sursoom > #productos > div > div > a:first-of-type {
+        margin-bottom: 20px;
+    }
+
+    #sursoom > #productos > div > div > a:nth-of-type(n+4) {
+        margin-top: 0px;
+    }
+
+    #sursoom > #productos > div > div > a:nth-of-type(n+5) {
+        margin-top: 20px;
+    }
+
+    #sursoom > #documentacion > div > div:first-of-type {
+        background-position: center;
+    }
+
+    #sursoom > #descanso-2 > div {
+        width: 75%;
+    }
+
+    #sursoom > #blog > div > div > article {
+        width        : 100%;
+        margin-bottom: 40px;
+    }
+
+    #sursoom > #blog > div > div > article:last-of-type {
+        margin-bottom: 0px;
+    }
+
+    #contacto > div {
+        width: 75%;
+    }
+
+    body > footer > div:first-of-type > div {
+        width        : 100%;
+        margin-bottom: 40px;
+    }
+
+        body > footer > div:first-of-type > div:nth-of-type(2) > img {
+            width : 50%;
+            margin: auto;
+        }
+
+    body > footer > div:first-of-type > div:last-of-type {
+        margin-bottom: 0px;
+    }
+
+    /*GBA*/
+    #gba > header > div {
+        width: 90%;
+    }
+
+        #gba > header > div > div:first-of-type > h1 {
+            white-space: normal;
+            font-size  : 2em;
+        }
+
+        #gba > header > div > div:first-of-type > sub {
+            white-space: normal;
+        }
+
+    #gba > #nosotros > div {
+        width: 90%;
+    }
+
+    #gba > #descanso-1 > div {
+        width: 90%;
+    }
+
+    #gba > #soluciones > div {
+        width: 90%;
+    }
+
+    #gba > #soluciones > div > div > a {
+        width: 49%;
+    }
+
+    #gba > #soluciones > div > div > a:first-of-type {
+        margin-bottom: 20px;
+    }
+
+    #gba > #soluciones > div > div > a:nth-of-type(n+4) {
+        margin-top: 0px;
+    }
+
+    #gba > #soluciones > div > div > a:nth-of-type(n+5) {
+        margin-top: 20px;
+    }
+
+    #gba > #descanso-2 > div {
+        width: 90%;
+    }
+
+    #gba > #propuesta-economica > div {
+        width: 90%;
+    }
+
+    /*Odoo*/
+    #odoo > #nosotros > div {
+        width: 90%;
+    }
+
+    #odoo > #clientes > div {
+        width: 90%;
+    }
+
+    #odoo > #aplicaciones-principales > div {
+        width: 90%;
+    }
+
+    #odoo > #metodologia > div > div > a {
+        width        : 49%;
+        margin-bottom: 20px;
+    }
+
+    #odoo > #metodologia > div > div > a:nth-of-type(n+4) {
+        margin-top: 0px;
+    }
+
+    #odoo > #metodologia > div > div > a:nth-of-type(n+5) {
+        margin-bottom: 0px;
+    }
+}
+
+@media all and (orientation: landscape) and (max-width: 740px) {
+    #sursoom > header > div {
+        width: 90%;
+    }
+
+        #sursoom > header > div > h1 {
+            font-size  : 2em;
+            white-space: normal;
+        }
+
+    #sursoom > header > div > sub {
+        white-space: normal;
+    }
+
+    #sursoom > #nosotros > div > div:first-of-type {
+        width: 100%;
+    }
+
+    #sursoom > #nosotros > div > div:last-of-type {
+        display: none;
+    }
+
+    #sursoom > #descanso-1 {
+        height: 100vh;
+    }
+
+        #sursoom > #descanso-1 > div > h3 {
+            font-size  : 1.5em;
+            white-space: normal;
+        }
+
+    #sursoom > #productos > div > div > a {
+        width        : 100%;
+        margin-bottom: 20px !important;
+    }
+
+    #sursoom > #productos > div > div > a:last-of-type {
+        margin-bottom: 0px !important;
+    }
+
+    #sursoom > #documentacion > div {
+        height : auto;
+        padding: 40px 0px;
+    }
+
+    #sursoom > #documentacion > div:first-of-type {
+        background-color: rgb(240, 240, 240);
+    }
+
+        #sursoom > #documentacion > div > div:first-of-type {
+            display: none;
+        }
+
+        #sursoom > #documentacion > div > div {
+            width  : 90%;
+            margin : auto;
+            padding: 0px;
+        }
+
+    #sursoom > #descanso-2 > div {
+        width: 90%;
+    }
+
+    /*GBA*/
+    #gba > header > div > div:first-of-type {
+        width: 100%;
+    }
+
+    #gba > header > div > div:last-of-type {
+        display: none;
+    }
+
+    #gba > #nosotros > div > div {
+        width: 100%;
+    }
+
+    #gba > #nosotros > div > div:last-of-type {
+        display: none;
+    }
+
+    #gba > #descanso-1 > div > ul > li {
+        font-size: 0.85em;
+    }
+
+    #gba > #soluciones > div > div > a {
+        width        : 100%;
+        margin-bottom: 20px;
+    }
+
+    #gba > #soluciones > div > div > a:nth-of-type(n+5) {
+        margin-top: 0px;
+    }
+
+    #gba > #soluciones > div > div > a:last-of-type {
+        margin-bottom: 0px;
+    }
+
+    #gba > #documentacion > div > div:first-of-type {
+        display: none;
+    }
+
+    #gba > #documentacion > div:first-of-type {
+        height          : auto;
+        background-color: rgb(240, 240, 240);
+    }
+
+        #gba > #documentacion > div > div:last-of-type {
+            width: 100%;
+        }
+
+    /*Odoo*/
+    #odoo > header > h1 {
+        font-size: 2em;
+    }
+
+    #odoo > #nosotros > div > div {
+        width: 100%;
+    }
+
+    #odoo > #nosotros > div > div:last-of-type {
+        display: none;
+    }
+
+    #odoo > #ecosistema > div {
+        width: 50%;
+    }
+
+    #odoo > #metodologia > div > div > a {
+        width: 100%;
+    }
+}
+
+@media all and (orientation: portrait) and (max-width: 1030px) {
+    body > button {
+        display: block;
+    }
+
+    body > nav {
+        width           : 100%;
+        height          : 100%;
+        position        : fixed;
+        background-color: white;
+        margin-top      : -100vh;
+        transition      : all 0.3s;
+    }
+
+    .active-nav {
+        margin-top: 0px !important;
+    }
+
+        body > nav > div {
+            display        : flex;
+            align-items    : center;
+            justify-content: center;
+            flex-direction : column;
+        }
+
+            body > nav > div > a {
+                margin-bottom: 40px;
+            }
+
+            body > nav > div > ul {
+                flex-direction: column;
+            }
+
+                body > nav > div > ul > li {
+                    margin-right : 0px;
+                    margin-bottom: 12px;
+                }
+
+                body > nav > div > ul > li:last-of-type {
+                    margin-bottom: 0px;
+                }
+
+    #sursoom > header > div > h1 {
+        white-space: normal;
+    }
+
+    #sursoom > header > div > sub {
+        white-space: normal;
+    }
+
+    #sursoom > #descanso-1 > div {
+        width: 75%;
+    }
+
+    #sursoom > #productos > div > div > a {
+        width        : 100%;
+        margin-bottom: 20px;
+    }
+
+    #sursoom > #productos > div > div > a:nth-of-type(n+4) {
+        margin-top: 0px;
+    }
+
+    #sursoom > #productos > div > div > a:last-of-type {
+        margin-bottom: 0px;
+    }
+
+    #sursoom > #documentacion > div {
+        height : auto;
+        padding: 40px 0px;
+    }
+
+    #sursoom > #documentacion > div:first-of-type {
+        background-color: rgb(240, 240, 240);
+    }
+
+        #sursoom > #documentacion > div > div:first-of-type {
+            display: none;
+        }
+
+        #sursoom > #documentacion > div > div {
+            width  : 85%;
+            margin : auto;
+            padding: 0px;
+        }
+
+    #sursoom > #descanso-2 > div {
+        width: 75%;
+    }
+
+    #sursoom > #blog > div > div > article {
+        width        : 100%;
+        margin-bottom: 40px;
+    }
+
+    #sursoom > #blog > div > div > article:last-of-type {
+        margin-bottom: 0px;
+    }
+
+    #contacto > div {
+        width: 75%;
+    }
+
+    body > footer > div:first-of-type > div {
+        width        : 100%;
+        margin-bottom: 40px;
+    }
+
+    body > footer > div:first-of-type > div:last-of-type {
+        margin-bottom: 0px;
+    }
+
+        body > footer > div:first-of-type > div:nth-of-type(2) > img {
+            width : 50%;
+            margin: auto;
+        }
+
+    /*GBA*/
+    #gba > header > div > div:first-of-type {
+        width: 100%;
+    }
+
+    #gba > header > div > div:last-of-type {
+        display: none;
+    }
+
+    #gba > header > div > div:first-of-type > sub {
+        white-space: normal;
+        text-align : justify;
+    }
+
+    #gba > #nosotros > div > div {
+        width: 100%;
+    }
+
+    #gba > #nosotros > div > div:last-of-type {
+        display: none;
+    }
+
+    #gba > #descanso-1 > div > ul > li {
+        font-size: 0.85em;
+    }
+
+    #gba > #soluciones > div > div > a {
+        width        : 100%;
+        margin-bottom: 20px;
+    }
+
+    #gba > #soluciones > div > div > a:nth-of-type(n+4) {
+        margin-top: 0px;
+    }
+
+    #gba > #soluciones > div > div > a:last-of-type {
+        margin-bottom: 0px;
+    }
+
+    #gba > #documentacion > div {
+        height: auto;
+    }
+
+    #gba > #documentacion > div:first-of-type {
+        background-color: rgb(240, 240, 240);
+    }
+
+        #gba > #documentacion > div > div {
+            width: 100%;
+        }
+
+        #gba > #documentacion > div > div:first-of-type {
+            display: none;
+        }
+
+    /*Odoo*/
+    #odoo > header {
+        height: 50vh;
+    }
+
+        #odoo > header > img {
+            margin-top: 0px;
+        }
+
+    #odoo > #nosotros > div > div {
+        width: 100%;
+    }
+
+    #odoo > #nosotros > div > div:last-of-type {
+        display: none;
+    }
+
+    #odoo > #metodologia > div > div > a {
+        width        : 100%;
+        margin-bottom: 20px;
+    }
+
+    #odoo > #metodologia > div > div > a:nth-of-type(n+4) {
+        margin-top: 0px;
+    }
+
+    #odoo > #metodologia > div > div > a:last-of-type {
+        margin-bottom: 0px;
+    }
+}
+
+@media all and (orientation: portrait) and (max-width: 770px) {
+    #sursoom > #nosotros > div > div:last-of-type {
+        display: none;
+    }
+
+    #sursoom > #nosotros > div > div {
+        width: 100%;
+    }
+
+    #sursoom > #descanso-1 > div {
+        width: 85%;
+    }
+
+    #sursoom > #descanso-2 > div {
+        width: 85%;
+    }
+
+    #contacto > div {
+        width: 85%;
+    }
+
+    /*Odoo*/
+    #odoo > header > h1 {
+        font-size: 1.75em;
+    }
+
+    #odoo > #ecosistema > div {
+        width: 50%;
+    }
+}
+
+@media all and (orientation: portrait) and (max-width: 420px) {
+    body > nav > div {
+        width: 85%;
+    }
+
+        body > nav > div > a {
+            height: auto;
+            width : 100%;
+        }
+
+            body > nav > div > a > img {
+                width : 100%;
+                height: auto;
+            }
+
+    #sursoom > header > div > h1 {
+        font-size: 2em;
+    }
+
+    #sursoom > header > div > sub {
+        text-align: justify;
+    }
+
+    #contacto > div > form > div {
+        width: 100%;
+    }
+
+    #sursoom > #productos > div > sub {
+        text-align: justify;
+    }
+
+        #sursoom > #productos > div > div > a > span {
+            font-size: 5em;
+        }
+
+        #sursoom > #productos > div > div > a > strong {
+            font-size: 1.5em;
+        }
+
+    #sursoom > #descanso-2 {
+        height : auto;
+        padding: 80px 0px;
+    }
+
+        #sursoom > #descanso-2 > div > figure {
+            width: 100%;
+        }
+
+            #sursoom > #descanso-2 > div > figure > img {
+                width: 50%;
+            }
+
+    #sursoom > #documentacion > div > div > ul > li {
+        text-align: justify;
+    }
+
+    #sursoom > #blog > div > sub {
+        text-align: justify;
+    }
+
+    body > footer > div:first-of-type > div:nth-of-type(2) > img {
+        width: 100%;
+    }
+
+    body > footer > div:last-of-type {
+        font-size: 0.85em;
+    }
+
+    /*GBA*/
+    #gba > header > div > div:first-of-type > h1 {
+        font-size : 2em;
+        text-align: center;
+    }
+
+    #gba > #descanso-1 > div > h3 {
+        text-align: right;
+    }
+
+    #gba > #descanso-1 > div > ul > li:first-of-type {
+        border-left: none;
+    }
+
+    #gba > #descanso-1 > div > ul > li {
+        width        : 100%;
+        border       : none;
+        border-bottom: 2px solid white;
+    }
+
+    #gba > #descanso-1 > div > ul > li:last-of-type {
+        border-bottom: none;
+    }
+
+    #gba > #documentacion > div > div {
+        padding: 40px;
+    }
+
+    /*Odoo*/
+    #odoo > header > img {
+        width: 50%;
+    }
+
+    #odoo > header > h1 {
+        font-size: 1.25em;
+        padding  : 0px 40px;
+    }
+
+    #odoo > #ecosistema > h1 {
+        font-size: 1.75em;
+    }
+
+    #odoo > #ecosistema > div {
+        width: 100%;
+    }
+
+    #odoo > #aplicaciones-principales > div > div > div > ul > li {
+        width        : 50%;
+        margin-bottom: 1px;
+        white-space  : pre-line;
+    }
+
+    #odoo > #aplicaciones-principales > div > div > div > ul > li:nth-of-type(2) {
+        padding-right: 0px;
+    }
+
+        #odoo > #aplicaciones-principales > div > div > div > ul > li > a {
+            font-size  : 0.85em;
+            white-space: pre-line;
+        }
+}
